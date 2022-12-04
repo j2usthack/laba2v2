@@ -29,7 +29,7 @@ public class Person
     {
         return $"Фамилия: {_lastName}\n" +
             $"Имя: {_firstName}\n" +
-            $"Дата рождения: {_birthDate:dd:MM:yyyy}";
+            $"Дата рождения: {_birthDate:dd.MM.yyyy}";
     }
     public string ToShortString() => $"Фамилия: {_lastName}\nИмя: {_firstName}";
 }

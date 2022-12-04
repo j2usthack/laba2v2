@@ -7,12 +7,13 @@ public class ResearchTeam
     private readonly int _regNumber;
     private readonly TimeFrame _researchDuration;
     private Paper[] _papers;
-    public ResearchTeam(string researchName, string organizationName, int regNumber, TimeFrame researchDuration)
+    public ResearchTeam(string researchName, string organizationName, int regNumber, TimeFrame researchDuration, Paper[] papers)
     {
         _researchName = researchName;
         _organizationName = organizationName;
         _regNumber = regNumber;
         _researchDuration = researchDuration;
+        _papers = papers;
     }
     public ResearchTeam()
     {
@@ -43,11 +44,12 @@ public class ResearchTeam
             $"Название: {_organizationName}\n" +
             $"Рег. номер: {_regNumber}\n" +
             $"Продолжительность исследований: {_researchDuration}\n" +
-            $"Список публикаций: ";
+            $"Список публикаций: \n";
         foreach (var item in _papers)
         {
-            full += $"{item.Title}, ";
+            full += $"{item.ToFullString()} \n";
         }
+        full += $"Последняя публикация:\n{PaperLast.ToFullString()}";
         return full;
     }
     public string ToShortString()

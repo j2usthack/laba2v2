@@ -17,5 +17,7 @@ public class Paper
         Author = new();
         PublicationDate = new(2024, 8, 25, 11, 12, 13);
     }
-    public string ToFullString() => $"Полей нет, есть только свойства";
+    public string ToFullString() => $"Название: {Title}\n" +
+        $"Автор:\n{Author.ToFullString()}\n" +
+        $"Дата публикации: {PublicationDate:dd.MM.yyyy}";
 }
