@@ -49,7 +49,7 @@ public class ResearchTeam
         {
             full += $"{item.ToFullString()} \n";
         }
-        full += $"Последняя публикация:\n{PaperLast.ToFullString()}";
+        full += $"Последняя публикация вообще(НЕ КОНКРЕТНО ОТ ЭТОГО АВТОРА):\n{PaperLast.ToFullString()}";
         return full;
     }
     public string ToShortString()
