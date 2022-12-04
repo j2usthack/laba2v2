@@ -1,6 +1,4 @@
-﻿
-
-namespace AllStaffNet6.laba2
+﻿namespace AllStaffNet6.laba2
 {
     public class Program
     {
