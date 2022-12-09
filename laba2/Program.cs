@@ -26,7 +26,7 @@
                 papersOneD[i].Title = "sdasd";
             }
             stopWatch.Stop();
-
+            Console.WriteLine($"Тики после одномерного массива: {TimeSpan.FromMilliseconds(Environment.TickCount):hh\\:mm\\:ss\\:ff}\n");
             Console.WriteLine($"Тики после одномерного и до двумерного: {stopWatch.Elapsed:mm\\:ss\\:ff}");
 
             stopWatch.Reset();
@@ -43,7 +43,7 @@
             }
 
             stopWatch.Stop();
-
+            Console.WriteLine($"Тики после двумерного массива: {TimeSpan.FromMilliseconds(Environment.TickCount):hh\\:mm\\:ss\\:ff}\n");
             Console.WriteLine($"Тики после двумерного и до ступенчатого: {stopWatch.Elapsed:mm\\:ss\\:ff}\n");
 
             stopWatch.Reset();
@@ -63,6 +63,7 @@
 
             stopWatch.Stop();
 
+            Console.WriteLine($"Тики после ступенчатого массива: {TimeSpan.FromMilliseconds(Environment.TickCount):hh\\:mm\\:ss\\:ff}\n");
             Console.WriteLine($"Тики после ступенчатого: {stopWatch.Elapsed:mm\\:ss\\:ff}\n");
 
             Paper[] papers = new Paper[2]
