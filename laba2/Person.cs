@@ -1,8 +1,10 @@
-﻿namespace AllStaffNet6.laba2;
+﻿using System.Text.RegularExpressions;
+
+namespace AllStaffNet6.laba2;
 
 public class Person
 {
-    private readonly string _firstName;
+    private string _firstName;
     private readonly string _lastName;
     private DateTime _birthDate;
     public Person(string firstName, string lastName, DateTime birthDate)
@@ -13,11 +15,25 @@ public class Person
     }
     public Person()
     {
-        _firstName = "Акакий";
+        _firstName = "акаКиЙ";
         _lastName = "Викторович";
         _birthDate = new(1995, 6, 23);
     }
-    public string FirstName => _firstName;
+    public string FirstName
+    {
+        get { return _firstName.Substring(0,1).ToUpper() + _firstName.Substring(1).ToLower(); }
+        set 
+        {
+            if (Regex.IsMatch(value, "^[A-ZА-ЯЁ][a-zа-яё]{2,}$"))
+            {
+                _firstName = value;
+            }
+            else
+            {
+                throw new ArgumentException($"Invalid first name value {value}");
+            }
+        }
+    }
     public string LastName => _lastName;
     public DateTime BirthDate => _birthDate;
     public int BirthYear

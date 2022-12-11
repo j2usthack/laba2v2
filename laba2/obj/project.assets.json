@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programs\\Git HUB repositories\\laba2v2\\laba2\\laba2.csproj",
+      "projectUniqueName": "D:\\Programs\\Git HUB repositories\\laba2v2-main\\laba2\\laba2.csproj",
       "projectName": "laba2",
-      "projectPath": "D:\\Programs\\Git HUB repositories\\laba2v2\\laba2\\laba2.csproj",
+      "projectPath": "D:\\Programs\\Git HUB repositories\\laba2v2-main\\laba2\\laba2.csproj",
       "packagesPath": "C:\\Users\\dimas\\.nuget\\packages\\",
-      "outputPath": "D:\\Programs\\Git HUB repositories\\laba2v2\\laba2\\obj\\",
+      "outputPath": "D:\\Programs\\Git HUB repositories\\laba2v2-main\\laba2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Programs\\Visual Studio Shared\\NuGetPackages"

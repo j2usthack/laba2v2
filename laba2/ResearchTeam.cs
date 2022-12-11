@@ -2,10 +2,10 @@
 
 public class ResearchTeam
 {
-    private readonly string _researchName;
-    private readonly string _organizationName;
-    private readonly int _regNumber;
-    private readonly TimeFrame _researchDuration;
+    private string _researchName;
+    private string _organizationName;
+    private int _regNumber;
+    private TimeFrame _researchDuration;
     private Paper[] _papers;
     public ResearchTeam(string researchName, string organizationName, int regNumber, TimeFrame researchDuration, Paper[] papers)
     {
@@ -28,11 +28,53 @@ public class ResearchTeam
             new("Титул 3", new Person(), DateTime.Now),
         };
     }
-    public string ResearchName => _researchName;
-    public string OrganizationName => _organizationName;
-    public int RegNumber => _regNumber;
-    public TimeFrame ResearchDuration => _researchDuration;
-    public Paper[]? Papers => _papers;
+    //public string ResearchName => _researchName;
+    public string ResearchName 
+    {
+        get => _researchName;
+        set { 
+            _researchName = value; 
+        }
+    }
+
+    public string OrganizationName
+    {
+        get => _organizationName;
+        set { 
+            _organizationName = value; 
+        }
+    }
+	
+	 public int RegNumber
+    {
+        get => _regNumber;
+        set { 
+            _regNumber = value; 
+        }
+    }
+	
+	 public TimeFrame ResearchTimeFrame
+    {
+        get => _researchDuration;
+        set { 
+            _researchDuration = value; 
+        }
+    }
+	
+	
+    //public string OrganizationName => _organizationName;
+    //public int RegNumber => _regNumber;
+    //public TimeFrame ResearchDuration => _researchDuration;
+    //public Paper[]? Papers => _papers;
+
+    public Paper[]? Papers 
+    {
+        get => _papers;
+        set
+        {
+            _papers = value;
+        }
+    }
     public Paper? PaperLast => _papers?.OrderBy(x => x.PublicationDate).LastOrDefault();
     public void AddPapers(params Paper[] newPapers)
     {
